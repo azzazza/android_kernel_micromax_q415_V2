@@ -9,7 +9,8 @@ make dep
 make clean
 make mrproper
 RUN=`date +%H%M%S` && date && date >> make.$RUN.log && /usr/bin/time -f "Total time: %E"
-make msm8909_defconfig
+#make msm8909_defconfig
+make Q415_defconfig
 #make menuconfig
 make -j5 2>&1 | tee -a make.$RUN.log && date >> make.$RUN.log && date
 
