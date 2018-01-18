@@ -1175,4 +1175,8 @@ if SYNAPTICS_DSX_S3207
 source "drivers/input/touchscreen/synaptics_dsx_s3207/Kconfig"
 endif
 
+config TOUCHSCREEN_DOUBLETAP2WAKE
+	tristate "DoubleTap2Wake for touchscreens"
+	default y
+
 endif

@@ -1601,6 +1601,10 @@ static int report_vm_bms_soc(struct qpnp_bms_chip *chip)
 
 	charging = is_battery_charging(chip);
 
+#ifdef UNISCOPE_DRIVER_QC8909 //liguowei@uniscope.com //  Jason charge 20140901
+	   uni_charger_status_using_ft5x06=charging;
+#endif
+
 	pr_debug("charging=%d last_soc=%d last_soc_unbound=%d\n",
 		charging, chip->last_soc, chip->last_soc_unbound);
 	/*
