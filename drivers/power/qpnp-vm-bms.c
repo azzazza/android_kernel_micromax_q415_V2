@@ -1587,6 +1587,9 @@ static int prepare_reported_soc(struct qpnp_bms_chip *chip)
 #define SOC_CATCHUP_SEC_PER_PERCENT	60
 #define MAX_CATCHUP_SOC	(SOC_CATCHUP_SEC_MAX / SOC_CATCHUP_SEC_PER_PERCENT)
 #define SOC_CHANGE_PER_SEC		5
+#ifdef UNISCOPE_DRIVER_QC8909 //liguowei@uniscope.com //  Jason charge 20140901
+ bool uni_charger_status_using_ft5x06=0;
+#endif
 static int report_vm_bms_soc(struct qpnp_bms_chip *chip)
 {
 	int soc, soc_change, batt_temp, rc;
