@@ -58,7 +58,6 @@
 #define MITIGATION_MAX_DELAY         30
 #define SUPPLY_LM_GET_MIT_CMD        2
 #define SUPPLY_LM_STEP1_REQ_CMD      3
-#define __ATTR_RW(attr) __ATTR(attr, 0644, attr##_show, attr##_store)
 
 enum supply_lm_input_device {
 	SUPPLY_LM_THERM_DEVICE,
